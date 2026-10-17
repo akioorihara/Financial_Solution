@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 function Square() {
-  const [count, setCount] = useState(null);
+  const [value, setValue] = useState(null);
 
   function handleClick() {
-    setCount(count + 1);
+    setValue("X");
   }
 
   return (
     <button className="square" onClick={handleClick}>
-      {count}
+      {value}
     </button>
   );
 }
