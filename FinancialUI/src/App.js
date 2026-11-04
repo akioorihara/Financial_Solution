@@ -15,7 +15,7 @@ function Board({ xIsNext, squares, onPlay }) {
     }
 
     const nextSquares = squares.slice();
-    if (isXNext) {
+    if (xIsNext) {
       nextSquares[i] = "X";
     } else {
       nextSquares[i] = "O";
@@ -28,7 +28,7 @@ function Board({ xIsNext, squares, onPlay }) {
   if (winner) {
     status = "Winner: " + winner;
   } else {
-    status = "Next player: " + (isXNext ? "X" : "O");
+    status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   return (
